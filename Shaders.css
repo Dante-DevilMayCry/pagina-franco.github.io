@@ -1227,7 +1227,6 @@
     transition: opacity 0.2s ease-in;
   }
   .forgot-password-p .forgot-password-content-p input[type="email"] {
-    display: flex;
     width: 80%;
     margin-right: 0px;
     border-right: none;
@@ -1250,3 +1249,299 @@
     cursor: auto;
     visibility: visible;
   }
+  
+  /* pop mis cursos */
+
+#popupBody-c{
+  width:40%;
+  height: 70%;
+  padding: 3%;
+  text-align: center;
+  font-size: large;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #CCC;
+  background: #FFF;
+  position: relative;
+  transition: all 5s ease-in-out;
+  margin: 5% auto;    
+}
+.modal-btn-p-c {
+  padding: 5px 15px;
+  font-size: 26px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  opacity: 0.7;
+  display: flex;
+  padding-top: 37.7%;
+  align-items: center;
+}
+.modal-btn-p-c:hover{
+  border-bottom: 1px solid white;
+}
+#modal-toggle-p-c {
+  display: none;
+}
+#modal-toggle-p-c:hover{
+  border-bottom: 1px solid white;
+}
+
+.modal-content-p-c,
+.modal-backdrop-p-c {
+  opacity: 0;
+  position: fixed;
+  padding: 15px;
+  padding-top: 50px;
+  z-index: -1;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-content-p-c {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+  height: 550px;
+  max-height: 98%;
+  width: 70%;
+  max-width: 600px;
+  text-align: center;
+  transform: translateX(125%);
+}
+
+.modal-backdrop-p-c {
+  left: 0;
+  top: 0;
+  height: 100%;
+  height: 100vh;
+  width: 100%;
+  width: 100vw;
+  transform: scale(0);
+}
+
+#modal-toggle-p-c:checked ~ .modal-backdrop-p-c {
+  opacity: 1;
+  background-color: rgba(0, 70, 62, 0.5);
+  z-index: 998;
+  transform: scale(1);
+}
+
+#modal-toggle-p-c:checked ~ .modal-content-p-c {
+  opacity: 1;
+  background-color: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
+  pointer-events: auto;
+  cursor: auto;
+  z-index: 999;
+  transform: translateX(0%);
+}
+
+@media (max-width: 600px) {
+  #modal-toggle-p-c:checked ~ .modal-backdrop-p-c {
+    opacity: 0;
+  }
+
+  .modal-content-p-c {
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+}
+.modal-close-btn-p-c {
+  margin-top: 5px;
+  display: inline-block;
+  cursor: pointer;
+ position: absolute;
+    right: 10px;
+    top: 5px;
+}
+.modal-close-btn-p-c svg {
+  transition: 0.2s;
+}
+.modal-close-btn-p-c svg line {
+  stroke-width: 5px;
+  stroke: coral;
+}
+.modal-close-btn-p-c:hover svg {
+  transform: rotate(90deg);
+}
+
+/* BASIC FUNCTIONALITY .tabs */
+.tabs-p-c {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+.tabs-p-c > .radio-p-c{
+  display: none;
+}
+.tabs-p-c > .radio-p-c:checked + .table-p-c + .tabs-content-p-c {
+  display: block;
+}
+.tabs-p-c > .table-p-c {
+  order: -1;
+  flex-basis: 100%;
+  flex-shrink: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tabs-p-c .tabs-content-p-c {
+  width: 100%;
+  display: none;
+}
+
+/* END BASIC FUNCTIONALITY .tabs */
+/*  THEME for .tabs with login & sign-in  */
+.tabs-p-c > .table-p-c {
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: solid coral 5px;
+  color: coral;
+  cursor: pointer;
+}
+.tabs-p-c > .table-p-c span {
+  font-weight: 600;
+  font-size:medium;
+}
+.tabs-p-c > .table-p-c:hover {
+  color: red;
+  background: rgba(250, 237, 90, 0.972);
+}
+.tabs-p-c > .radio-p-c:checked + .table-p-c {
+  color: #fff;
+  background: coral;
+  cursor: auto;
+}
+.tabs-p-c > .radio-p-c:checked + .table-p-c span {
+  display: inline-block;
+  font-weight: 500;
+  transform: scale(1.2);
+  transition: 0.1s;
+}
+
+/*  END THEME for .tabs with login & sign-in  */
+/*  START style login & sign up  */
+.tabs-p-c > .tabs-content-p-c .login_socnet-p-c {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-wrap: no-wrap;
+  justify-content: space-around;
+}
+.tabs-p-c > .tabs-content-p-c .login_socnet-p-c a {
+  margin: 20px;
+  margin-bottom: 0;
+  width: 100%;
+  font-size: 60px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.tabs-p-c > .tabs-content-p-c .login_socnet-p-c a:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(1px 3px 2px rgba(0, 0, 0, 0.2));
+}
+.tabs-p-c > .tabs-content-p-c .login_socnet-p-c .fa-vk-p-c {
+  color: #7986CB;
+}
+.tabs-p-c > .tabs-content-p-c .login_socnet-p-c .fa-google-plus-p-c {
+  color: #E57373;
+}
+.tabs-p-c > .tabs-content-p-c .login_socnet-p-c .fa-facebook-p-c {
+  color: #5C6BC0;
+}
+.tabs-p-c > .tabs-content-p-c form {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+}
+.tabs-p-c > .tabs-content-p-c form input {
+  padding: 10px;
+  margin: 15px 0;
+  border: none;
+  border-bottom: solid 1px coral;
+  font-size: 18px;
+  letter-spacing: 1px;
+  transition: 0.1s;
+}
+.tabs-p-c > .tabs-content-p-c form input:focus {
+  transform: translateX(10px);
+  outline: none;
+}
+.tabs-p-c > .tabs-content-p-c input[type="submit"] {
+  padding: 15px 0;
+  width: 100%;
+  background: coral;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+.tabs-p-c > .tabs-content-p-c input[type="submit"]:focus {
+  transform: none;
+}
+.tabs-p-c > .tabs-content-p-c .forgot-password-p-c label {
+  margin: 0 auto;
+  width: 70%;
+  color: coral;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.tabs-p-c > .tabs-content-p-c .forgot-password-p-c label:hover {
+  text-decoration: underline;
+}
+
+/*  END style login & sign up  */
+.forgot-password-p-c #forgot-password-toggle-p-c {
+  display: none;
+}
+.forgot-password-p-c .forgot-password-content-p-c {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in;
+}
+.forgot-password-p-c .forgot-password-content-p-c input[type="email"] {
+  width: 80%;
+  margin-right: 0px;
+  border-right: none;
+}
+.forgot-password-p-c .forgot-password-content-p-c input[type="submit"] {
+  width: 20%;
+  margin-left: 10px;
+}
+.forgot-password-p-c #forgot-password-toggle-p-c:checked ~ .forgot-password-content-p-c {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  pointer-events: auto;
+  cursor: auto;
+  visibility: visible;
+}

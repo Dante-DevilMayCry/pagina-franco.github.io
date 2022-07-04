@@ -20,7 +20,7 @@ body, button, input {
 }
 
 .container {
-  flex: 0 1 700px;
+  flex: 0 1 800px;
   margin: auto;
   padding: 10px;
 }
