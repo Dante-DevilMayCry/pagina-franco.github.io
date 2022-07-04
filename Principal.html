@@ -165,6 +165,40 @@
           </div>
       </div>
   </div>
+<!--popmiscuros-->
+<div id="popup-c" class="overlay">
+  <div id="popupBody-c">
+              <a id="cerrar" href="#">&times;</a>
+      <div class="popupContent">
+                      <div class="tabs-p-c">
+                  <!--  LOG IN  -->
+                              <input class="radio-p-c" id="tab-1-p-c" name="tabs-name-p-c" type="radio" checked>
+                              <label for="tab-1-p-c" class="table-p-c"><span>Inicia sesión</span></label>
+                              <div class="tabs-content-p-c">
+                              <div class="login_socnet-p-c">
+                                  <a href="https://es-la.facebook.com/login" target="_blank"><i class="icon ion-social-facebook"></i></a>
+                                  <a href="https://accounts.google.com/Login" target="_blank"><i class="icon ion-social-google"></i></a>
+                                  <a href="https://twitter.com/login" target="_blank"><i class="icon ion-social-twitter"></i></a>
+                              </div>
+                              <form action="">
+                                  <input type="email" placeholder="Ingresa tu email" required>
+                                  <input type="password" placeholder="Ingresa tu contraseña" required>
+                                  <input type="submit" value="Siguiente">
+                              </form>
+                              <form class="forgot-password-p-c" action="">
+                                  <input id="forgot-password-toggle-p-c" type="checkbox">
+                                  <label for="forgot-password-toggle-p-c">¿Has olvidado tu contraseña?</label>
+                                  <div class="forgot-password-content-p-c">
+                                      <input type="email" placeholder="Ingrese un email de recuperación" required>
+                                      <input type="submit" value="Siguiente">    
+                                  </div>
+                              </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      </div>
 
 <section class="section-plans" id="section-plans">
   <scroll-container>
@@ -364,7 +398,7 @@
     </div>
 
     <div class="u-center-text u-margin-top-huge">
-      <a href="#" class="btn btn--green">Acceder a mis cursos</a>
+      <a href="#popup-c" class="btn btn--green">Acceder a mis cursos</a>
     </div>
   </section>
 
